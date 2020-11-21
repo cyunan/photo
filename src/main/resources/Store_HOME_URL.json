@@ -1,0 +1,285 @@
+{
+    "code": 200,
+    "msg": "请求成功",
+    "result": {
+        "act_info": [
+            {
+                "seller": "珂润",
+                "advertisement": "【双11预售系列】必围清单来咯！",
+                "time": "2020-10-19",
+                "product_id": "1"
+            },
+            {
+                "seller": "BDCT",
+                "advertisement": "【单品推荐】超级减龄的一些单品推荐给大家",
+                "time": "2020-10-25",
+                "product_id": "2"
+            },
+            {
+                "seller": "马切达",
+                "advertisement": "【上新】如果给你一张免费的演唱会门票，你希望是谁呢？",
+                "time": "2020-11-19",
+                "product_id": "3"
+            },
+            {
+                "seller": "亿万少年",
+                "advertisement": "【好货】各位小主，本店精心为您挑选XL休闲裤人气宝贝！",
+                "time": "2020-10-15",
+                "product_id": "4"
+            },
+            {
+                "seller": "NIKE",
+                "advertisement": "【上新】亲，这些事我们即将上架的宝贝哦！",
+                "time": "2020-11-02",
+                "product_id": "5"
+            }
+        ],
+        "banner_info": [
+            {
+                "image": "https://img.zcool.cn/community/013de756fb63036ac7257948747896.jpg",
+                "option": 3,
+                "type": 0,
+                "value": {
+                    "url": "/act20161111?cyc_app=1"
+                }
+            },
+            {
+                "image": "https://img.zcool.cn/community/013de756fb63036ac7257948747896.jpg",
+                "option": 2,
+                "type": 0,
+                "value": {
+                    "url": "/act20161111?cyc_app=1"
+                }
+            },
+            {
+                "image": "https://img.zcool.cn/community/01270156fb62fd6ac72579485aa893.jpg",
+                "option": 1,
+                "type": 0,
+                "value": {
+                    "url": "/act20161111?cyc_app=1"
+                }
+            }
+        ],
+        "channel_info": [
+            {
+                "channel_name": "新品",
+                "image": "http://114.55.249.135:8089/apk/new.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "8"
+                }
+            },
+            {
+                "channel_name": "服饰",
+                "image": "http://114.55.249.135:8089/apk/costume.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "4"
+                }
+            },
+            {
+                "channel_name": "礼品",
+                "image": "http://114.55.249.135:8089/apk/gift.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "3"
+                }
+            },
+            {
+                "channel_name": "设备",
+                "image": "http://114.55.249.135:8089/apk/equip.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "5"
+                }
+            },
+            {
+                "channel_name": "策划",
+                "image": "http://114.55.249.135:8089/apk/plan.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "6"
+                }
+            },
+            {
+                "channel_name": "首饰",
+                "image": "http://114.55.249.135:8089/apk/jewelry.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "9"
+                }
+            },
+            {
+                "channel_name": "吃货",
+                "image": "http://114.55.249.135:8089/apk/snacks.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "11"
+                }
+            },
+            {
+                "channel_name": "修图",
+                "image": "http://114.55.249.135:8089/apk/ps.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "10"
+                }
+            },
+            {
+                "channel_name": "爆款",
+                "image": "http://114.55.249.135:8089/apk/hot.png",
+                "option": 2,
+                "type": 1,
+                "value": {
+                    "channel_id": "12"
+                }
+            },
+            {
+                "channel_name": "分类",
+                "image": "http://114.55.249.135:8089/apk/menu.png",
+                "option": 6,
+                "type": 1,
+                 "value": {
+                    "channel_id": "13"
+                }
+            }
+        ],
+        "hot_info": [
+            {
+                "cover_price": "159.00",
+                "figure": "/1477984921265.jpg",
+                "name": "现货【一方尘寰】剑侠情缘三剑三七秀 干将莫邪 90橙武仿烧蓝复古对簪",
+                "product_id": "9356"
+            },
+            {
+                "cover_price": "159.00",
+                "figure": "/1477984931882.jpg",
+                "name": "现货【一方尘寰】剑侠情缘三剑三七秀 干将莫邪 90橙武仿烧蓝复古对簪-特典版",
+                "product_id": "10391"
+            },
+            {
+                "cover_price": "29.00",
+                "figure": "/1452161899947.jpg",
+                "name": "【喵鹿酱】超萌 假透肉 拼接 踩脚过膝打底袜 裤袜-加绒保暖",
+                "product_id": "3831"
+            },
+            {
+                "cover_price": "199.00",
+                "figure": "/1447232577216.jpg",
+                "name": "【漫踪】原创 宫崎骏 龙猫 可爱雪地靴动漫保暖鞋周边冬季毛绒鞋子",
+                "product_id": "2691"
+            },
+            {
+                "cover_price": "70.00",
+                "figure": "/1474370572805.jpg",
+                "name": "【现货】【GIRLISM少女主义】 第4期 2016夏秋刊 lolita",
+                "product_id": "9414"
+            },
+            {
+                "cover_price": "4.80",
+                "figure": "/1465268743242.jpg",
+                "name": "【艾漫】全职高手-蜜饯系列",
+                "product_id": "6869"
+            },
+            {
+                "cover_price": "143.10",
+                "figure": "/1477360350123.png",
+                "name": "【高冷猫】暗黑系软妹病娇药丸少女秋装假俩件加厚卫衣帽衫  预售",
+                "product_id": "10136"
+            },
+            {
+                "cover_price": "329.00",
+                "figure": "/supplier/1467702094592.jpg",
+                "name": "【wacom】数位板画板ctl471手绘板bamboo电脑绘画电子绘图板ps",
+                "product_id": "7752"
+            }
+        ],
+        "recommend_info": [
+            {
+                "cover_price": "138.00",
+                "figure": "/supplier/1478873740576.jpg",
+                "name": "【尚硅谷】日常 萌系小天使卫衣--白色款",
+                "product_id": "10659"
+            },
+            {
+                "cover_price": "138.00",
+                "figure": "/supplier/1478873369497.jpg",
+                "name": "【尚硅谷】日常 萌系小恶魔卫衣--黑色款",
+                "product_id": "10658"
+            },
+            {
+                "cover_price": "32.00",
+                "figure": "/supplier/1478867468462.jpg",
+                "name": "预售【漫友文化】全职高手6 天闻角川  流地徽章 全新典藏版 蝴蝶蓝 猫树绘 赠精美大海报+首刷限定赠2017年活页台历",
+                "product_id": "10657"
+            },
+            {
+                "cover_price": "18.00",
+                "figure": "/1478860081305.jpg",
+                "name": "【幸运星】烫金雪纺JSK的配件小物：手 套、项链",
+                "product_id": "10656"
+            },
+            {
+                "cover_price": "178.00",
+                "figure": "/1478850234799.jpg",
+                "name": "【尚硅谷】妖狐图腾 阴阳师同人元素卫衣",
+                "product_id": "10655"
+            },
+            {
+                "cover_price": "138.00",
+                "figure": "/1478849792177.jpg",
+                "name": "【尚硅谷】学院风 日常百搭 宽松长袖衬衫",
+                "product_id": "10654"
+            }
+        ],
+        "seckill_info": {
+            "end_time": "1479052800",
+            "list": [
+                {
+                    "cover_price": "3499.00",
+                    "figure": "http://114.55.249.135:8089/apk/nikon D5600.png",
+                    "name": "尼康D5600单反 专业高清旅游 单反相机 入门级18-55 18-140VR防抖",
+                    "origin_price": "3999.00",
+                    "product_id": "7100"
+                },
+                {
+                    "cover_price": "12099.00",
+                    "figure": "http://114.55.249.135:8089/apk/EOS 90D(18-25).png",
+                    "name": "Canon/佳能90D单反相机18-55套机80D升级版90d佳能单反相机专业级高级照相机单反 专业 高清",
+                    "origin_price": "17399.00",
+                    "product_id": "7101"
+                },
+                {
+                    "cover_price": "9499.00",
+                    "figure": "http://114.55.249.135:8089/apk/ESO 90D(18-200).png",
+                    "name": "Canon/佳能 EOS 90D(18-200)套机 蚂蚁摄影 专业单反相机佳能90d",
+                    "origin_price": "9999.00",
+                    "product_id": "7102"
+                },
+                {
+                    "cover_price": "6169.00",
+                    "figure": "http://114.55.249.135:8089/apk/EOS 200D.png",
+                    "name": "佳能200d二代蚂蚁摄影照相机数码高清旅游200D2 ii入门级单反相机",
+                    "origin_price": "6469.00",
+                    "product_id": "9593"
+                },
+                {
+                    "cover_price": "11899.00",
+                    "figure": "http://114.55.249.135:8089/apk/EOS 60D.png",
+                    "name": "Canon/佳能6D2套机 蚂蚁摄影 EOS 24-105镜头 6d2全画幅相机单反",
+                    "origin_price": "11999.00",
+                    "product_id": "10536"
+                }
+            ],
+            "start_time": "1478772000"
+        }
+    }
+}

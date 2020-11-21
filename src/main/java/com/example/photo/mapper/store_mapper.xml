@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.photo.mapper.Store_Mapper">
+    <select id="finddata" resultMap="Store_Mapper">
+        select bi.*,ci.*
+        from store_banner_info bi
+        left join store_channel_info ci
+        on ci.id = bi.id
+        where bi.id = #{id}
+    </select>
+    <resultMap id="Store_Mapper" type="com.example.photo.bean.init.Store_DataInfo">
+        <!--assocication可以指定联合的JavaBean对象
+                        property="role"指定哪个属性是联合的对象
+                        javaType:指定这个属性对象的类型
+                    -->
+        <association property="store_bannerInfos"
+                     javaType="com.example.photo.bean.store.Store_bannerInfo">
+            <id property="id" column="id"/>
+            <result property="image" column="image"/>
+        </association>
+        <association property="store_channelInfos"
+                     javaType="com.example.photo.bean.store.Store_channelInfo">
+            <id property="id" column="id"/>
+            <result property="channel_name" column="channel_name"/>
+            <result property="image" column="image"/>
+        </association>
+
+    </resultMap>
+
+    <select id="finddatalist" resultMap="Store_Mapperlist">
+        select *
+        from store_hot_info hi
+        where hi.product_id = #{id}
+    </select>
+    <resultMap id="Store_Mapperlist" type="com.example.photo.bean.init.Store_DataInfoList">
+        <collection property="store_bannerInfos" ofType="com.example.photo.bean.store.Store_bannerInfo"
+                    javaType="java.util.ArrayList" select="findStore_bannerInfos"
+                    column="image">
+        </collection>
+        <collection property="store_channelInfos" ofType="com.example.photo.bean.store.Store_channelInfo"
+                    javaType="java.util.ArrayList" select="findstore_channelInfos"
+                    column="image">
+        </collection>
+    </resultMap>
+
+    <select id="findStore_bannerInfos" resultMap="Store_bannerInfos">
+        select * from store_banner_info bi where bi.image = #{image}
+    </select>
+    <resultMap id="Store_bannerInfos" type="com.example.photo.bean.store.Store_bannerInfo">
+        <id property="id" column="id"/>
+        <result property="image" column="image"/>
+    </resultMap>
+
+    <select id="findstore_channelInfos" resultMap="store_channelInfos">
+        select * from store_channel_info ci where ci.image = #{image}
+    </select>
+    <resultMap id="store_channelInfos" type="com.example.photo.bean.store.Store_channelInfo">
+        <id property="id" column="id"/>
+        <result property="image" column="image"/>
+        <result property="channel_name" column="channel_name"/>
+    </resultMap>
+
+<!--    <resultMap id="Store_Mapper" type="com.example.photo.bean.store.Store_bannerInfo">-->
+<!--        <id column="id" property="id"/>-->
+<!--        <result column="image" property="image"/>-->
+<!--        <association property="id" column="id" javaType="com.example.photo.bean.store.Store_channelInfo">-->
+<!--            <result property="channel_name" column="channel_name"/>-->
+<!--            <result property="image" column="image"/>-->
+<!--        </association>-->
+
+<!--    </resultMap>-->
+
+
+</mapper>

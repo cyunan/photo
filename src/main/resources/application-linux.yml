@@ -1,0 +1,36 @@
+server:
+  port: 8089
+#  servlet:
+#    context-path: /photo
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/photo?serverTimezone=UTC&&characterEncoding=utf-8
+    username: root
+    password: root
+  #静态资源访问
+  resources:
+    add-mappings: true
+    static-locations: classpath\:/META-INF/resources/,classpath\:/resources/,classpath\:/static/,classpath\:/public/,file\:${file.truepath}${file.staticpath}
+
+  servlet:
+    multipart:
+      #最大文件大小。值可以使用后缀“MB”或“KB”。指示兆字节或千字节大小。(-1为无限制)
+      max-file-size: -1
+      # 最大请求大小可以是mb也可以是kb
+      max-request-size: -1
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+file:
+  #静态资源对外暴露的访问路径
+  #apk安装包
+  staticAccessPath_apk: http://114.55.249.135:8089/apk/
+  uploadFolder_apk: /home/tomuser/apps/photo/apk/
+

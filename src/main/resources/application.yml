@@ -1,0 +1,8 @@
+
+spring:
+  profiles:
+    active: location
+#    控制台sql语句打印
+logging:
+  level:
+    com.example.photo.mapper: debug
