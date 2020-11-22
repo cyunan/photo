@@ -7,12 +7,12 @@ import java.util.List;
 public class Home_Recommed {
 
     private List<HR_ImageArr> imageArr;//轮转图片
-    private List<HR_Article> list_data;//推荐Listview数据
+    private List<Article_Rusult> list_data;//推荐Listview数据
 
     public Home_Recommed() {
     }
 
-    public Home_Recommed(List<HR_ImageArr> imageArr, List<HR_Article> list_data) {
+    public Home_Recommed(List<HR_ImageArr> imageArr, List<Article_Rusult> list_data) {
         this.imageArr = imageArr;
         this.list_data = list_data;
     }
@@ -25,11 +25,11 @@ public class Home_Recommed {
         this.imageArr = imageArr;
     }
 
-    public List<HR_Article> getList_data() {
+    public List<Article_Rusult> getList_data() {
         return list_data;
     }
 
-    public void setList_data(List<HR_Article> list_data) {
+    public void setList_data(List<Article_Rusult> list_data) {
         this.list_data = list_data;
     }
 }

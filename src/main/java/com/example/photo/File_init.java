@@ -15,6 +15,9 @@ public class File_init {
     //文章
     private String staticAccessPath_art;
     private String uploadFolder_art;
+    //视频
+    private String staticAccessPath_vlog;
+    private String uploadFolder_vlog;
 
     public String getStaticAccessPath_apk() {
         return staticAccessPath_apk;
@@ -46,5 +49,21 @@ public class File_init {
 
     public void setUploadFolder_art(String uploadFolder_art) {
         this.uploadFolder_art = uploadFolder_art;
+    }
+
+    public String getStaticAccessPath_vlog() {
+        return staticAccessPath_vlog;
+    }
+
+    public void setStaticAccessPath_vlog(String staticAccessPath_vlog) {
+        this.staticAccessPath_vlog = staticAccessPath_vlog;
+    }
+
+    public String getUploadFolder_vlog() {
+        return uploadFolder_vlog;
+    }
+
+    public void setUploadFolder_vlog(String uploadFolder_vlog) {
+        this.uploadFolder_vlog = uploadFolder_vlog;
     }
 }

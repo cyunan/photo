@@ -2,7 +2,7 @@ package com.example.photo.bean.init;
 
 import java.util.Date;
 
-public class HR_Article {
+public class Article_Rusult {
     private int id;//文章id
     private String id_unique;//发布者id
     private String title;//标题
@@ -16,10 +16,10 @@ public class HR_Article {
     private String name;//昵称
     private String label;//标签
 
-    public HR_Article() {
+    public Article_Rusult() {
     }
 
-    public HR_Article(String id_unique, String title, String content, String image_url, Date date, int store, int likes, String head_url, String name, String label) {
+    public Article_Rusult(String id_unique, String title, String content, String image_url, Date date, int store, int likes, String head_url, String name, String label) {
         this.id_unique = id_unique;
         this.title = title;
         this.content = content;

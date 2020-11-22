@@ -27,6 +27,10 @@ public class Controll {
     private Home home;
     @Autowired
     private UpdateApk updateApk;
+    @Autowired
+    private ArticleDao articleDao;
+    @Autowired
+    private VlogDao vlogDao;
     //测试类
 //    @PostMapping("/home_recommed")
 //    public JSONObject home_recommed(HttpServletRequest request) {
@@ -56,17 +60,51 @@ public class Controll {
         return jr.getJsonObjFromConfiguration("vlog_message.json");
     }
 
+    //发布文章
     @PostMapping("/add_art")
     public Object add_art(HttpServletRequest request){
-        return home.add_art(request);
+        return articleDao.add_art(request);
     }
+    //某用户在某一篇文章内发布评论
     @PostMapping("/comment_for_art")
     public Object comment_for_art(@RequestParam("art_id") String art_id,@RequestParam("id_unique") String id_unique,@RequestParam("comment") String comment){
-        return home.comment_for_art(art_id,id_unique,comment);
+        return articleDao.comment_for_art(art_id,id_unique,comment);
     }
-    @GetMapping("test2")
-    public Art_Label test2(){
-        return home.text2();
+    //查看所有文章
+    @PostMapping("article_all")
+    public Object article_all(){
+        return articleDao.article_all();
+    }
+    //查看某一用户所有文章
+    @PostMapping("article_user")
+    public Object article_user(@RequestParam("id_unique") String id_unique){
+        return articleDao.article_user(id_unique);
+    }
+    //查看某一类风格的文章（按标签查看）
+    @PostMapping("article_label")
+    public Object article_label(@RequestParam("lab_id") String lab_id){
+        return articleDao.article_label(lab_id);
+    }
+
+    //发布vlog
+    @PostMapping("/add_vlog")
+    public Object add_vlog(HttpServletRequest request){
+        return vlogDao.add_vlog(request);
+    }
+    //某用户在某一篇vlog内发布评论
+    @PostMapping("/comment_for_vlog")
+    public Object comment_for_vlog(@RequestParam("vlog_id") String vlog_id,@RequestParam("id_unique") String id_unique,@RequestParam("comment") String comment){
+        return vlogDao.comment_for_vlog(vlog_id,id_unique,comment);
+    }
+    //查看所有vlog
+    @PostMapping("vlog_all")
+    public Object vlog_all(){
+        return vlogDao.vlog_all();
+    }
+    //查看某一用户所有vlog
+    @PostMapping("vlog_user")
+    public Object vlog_user(@RequestParam("id_unique") String id_unique){
+        return vlogDao.vlog_user(id_unique);
     }
 
     /**

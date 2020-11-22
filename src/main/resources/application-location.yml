@@ -35,5 +35,8 @@ file:
   #文章图片
   staticAccessPath_art: http://localhost:8089/article/
   uploadFolder_art:  E:/photo/article/
+  #视频
+  staticAccessPath_vlog: http://localhost:8089/vlog/
+  uploadFolder_vlog:  E:/photo/vlog/
 
 

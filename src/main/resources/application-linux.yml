@@ -33,4 +33,9 @@ file:
   #apk安装包
   staticAccessPath_apk: http://114.55.249.135:8089/apk/
   uploadFolder_apk: /home/tomuser/apps/photo/apk/
-
+  #文章图片
+  staticAccessPath_art: http://114.55.249.135:8089/article/
+  uploadFolder_art:  /home/tomuser/apps/photo/article/
+  #视频
+  staticAccessPath_vlog: http://114.55.249.135:8089/vlog/
+  uploadFolder_vlog:  /home/tomuser/apps/photo/vlog/

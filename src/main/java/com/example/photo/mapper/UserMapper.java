@@ -7,6 +7,7 @@ import com.example.photo.bean.User;
 import com.example.photo.bean.User_Info;
 import com.example.photo.bean.art.Article;
 import com.example.photo.bean.recommed.HR_ImageArr;
+import com.example.photo.bean.vlog.Vlog;
 import org.apache.ibatis.annotations.*;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -88,6 +89,11 @@ public interface UserMapper {
     @Select("select * from article u where u.id=#{id}")
     Article find_artid(@Param("id") String id);
 
-
+    /**
+     * vlog
+     *
+     */
+    @Select("select * from vlog u where u.id=#{id}")
+    Vlog find_vlogid(@Param("id") String id);
 
 }

@@ -17,6 +17,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
         registry.addResourceHandler("/apk/**").addResourceLocations("file:"+ fileInit.getUploadFolder_apk());
         registry.addResourceHandler("/article/**").addResourceLocations("file:"+ fileInit.getUploadFolder_art());
+        registry.addResourceHandler("/vlog/**").addResourceLocations("file:"+ fileInit.getUploadFolder_vlog());
 
         //上传的图片在D盘下的OTA目录下，访问路径如：http://114.55.249.135:8888/touxiang/a.png
         //其中image_file表示访问的前缀。"file:/home/tomuser/apps/pinche/pas_card/"是文件真实的存储路径

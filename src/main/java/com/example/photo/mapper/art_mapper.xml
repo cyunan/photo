@@ -2,41 +2,82 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.photo.mapper.Art_Mapper">
 
-        <select id="getArticle" resultMap="Article_Mapper">
+    <select id="getArticles" resultMap="Article_Mapper">
+       select art.*,ui.*
+    from article art
+            left join user_info ui
+    on art.id_unique = ui.id_unique
+            order by date DESC,id DESC
+    </select>
+     <!-- id, 唯一性，注意啦，这个id用于标示这个javabean对象的唯一性， 不一定会是数据库的主键（不要把它理解为数据库对应表的主键）
+           property属性对应javabean的属性名，column对应数据库表的列名
+           （这样，当javabean的属性与数据库对应表的列名不一致的时候，就能通过指定这个保持正常映射了）
+       -->
+    <select id="getArticles_for_id_unique" resultMap="Article_Mapper">
            select art.*,ui.*
         from article art
 				left join user_info ui
         on art.id_unique = ui.id_unique
+        where art.id_unique = #{id_unique}
 				order by date DESC,id DESC
-        </select>
-         <!-- id, 唯一性，注意啦，这个id用于标示这个javabean对象的唯一性， 不一定会是数据库的主键（不要把它理解为数据库对应表的主键）
-               property属性对应javabean的属性名，column对应数据库表的列名
-               （这样，当javabean的属性与数据库对应表的列名不一致的时候，就能通过指定这个保持正常映射了）
-           -->
+    </select>
 
-        <resultMap id="Article_Mapper" type="com.example.photo.bean.init.HR_Article">
-            <id property="id" column="id"/>
-            <result property="id_unique" column="id_unique"/>
-            <result property="title" column="title"/>
-            <result property="content" column="content"/>
-            <result property="image_url" column="image_url"/>
-            <result property="date" column="date"/>
-            <result property="store" column="store"/>
-            <result property="likes" column="likes"/>
-            <result property="head_url" column="head_url"/>
-            <result property="name" column="name"/>
+    <resultMap id="Article_Mapper" type="com.example.photo.bean.init.Article_Rusult">
+        <id property="id" column="id"/>
+        <result property="id_unique" column="id_unique"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="image_url" column="image_url"/>
+        <result property="date" column="date"/>
+        <result property="store" column="store"/>
+        <result property="likes" column="likes"/>
+        <result property="head_url" column="head_url"/>
+        <result property="name" column="name"/>
 
-            <collection property="label" ofType="String"
-                        javaType="String" select="findlabel"
-                        column="id">
-            </collection>
+        <!--
+        collection定义一个子集合对象返回
+        ofType:指定集合里面元素的类型
+        property属性设置集合的属性名
+        -->
+        <collection property="label" ofType="String"
+                    javaType="String" select="findlabel"
+                    column="id">
+            <!--
+            id指的是主键,
+            column是数据库中的列,可以是别名
+            property映射的是实体类中的属性
+            result是普通列(非主键)
+            -->
+        </collection>
+    </resultMap>
 
-        </resultMap>
-        <select id="findlabel" resultType="String">
-           select GROUP_CONCAT(lab_id) from art_label u where u.art_id = #{id}
-        </select>
 
-<!--        <resultMap id="labels" type="com.example.photo.bean.art.Art_Label">-->
-<!--            <result property="lab_id" column="GROUP_CONCAT(lab_id)"/>-->
-<!--        </resultMap>-->
+    <select id="findlabel" resultType="String">
+       select GROUP_CONCAT(lab_id) from art_label u where u.art_id = #{id}
+    </select>
+
+    <select id="getArticles_for_label" resultMap="Articles_for_label_Mapper">
+        select lab.*,art.*,ui.*
+        from art_label lab
+        LEFT JOIN article art
+        on art.id = lab.art_id
+        left join user_info ui
+        on art.id_unique = ui.id_unique
+        where lab.lab_id = "手机拍摄"
+    </select>
+    <resultMap id="Articles_for_label_Mapper" type="com.example.photo.bean.init.Article_Rusult">
+        <id property="id" column="id"/>
+        <result property="id_unique" column="id_unique"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="image_url" column="image_url"/>
+        <result property="date" column="date"/>
+        <result property="store" column="store"/>
+        <result property="likes" column="likes"/>
+        <result property="head_url" column="head_url"/>
+        <result property="name" column="name"/>
+        <result property="label" column="lab_id"/>
+    </resultMap>
+
+
 </mapper>
